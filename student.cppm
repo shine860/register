@@ -1,9 +1,13 @@
 // Module registrar, course partition: defines Student class
-// File: student.cppm
+// File: student.cppm   Version: 1.0      License: AGPLv3
 // Created: Wei Gong open-src@qq.com      2025-12-12
-// Version: 1.0      License: AGPLv3
+//
+// Description:
+//     The interface and implementation of Student class are logically separated.
 
-// Only provides class interfaces, no implementations.
+// Change Log:
+//     [v1.1] Wei Gong open-src@qq.com   2025-12-12
+//         * added the implementation of Student class
 
 export module registrar:student;
 import std;
@@ -25,3 +29,20 @@ private:
 
     vector<class Course*> _courses;
 };
+
+// ----- Partial implementation of class Student -----
+
+Student::Student(string id, string name)
+    : m_name(name)
+    , m_id(id)
+{}
+
+string Student::info()
+{
+    return format("{}   {}\n", m_id, m_name);
+}
+
+bool Student::hasId(string id)
+{
+    return id == m_id;
+}
