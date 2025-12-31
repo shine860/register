@@ -13,6 +13,7 @@
 //     [v1.3] Wei Gong open-src@qq.com   2025-12-12 18:02:14
 //         * added Course::info()
 
+
 export module registrar:course;
 import std;
 
